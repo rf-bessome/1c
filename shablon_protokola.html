@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--ЗаголовокПротокола--</title>
+   
+</head>
+
+<style>
+    /* Styles go here */
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+
+    .page-footer-space {
+        height: 150px;
+    }
+
+
+    .page-footer {
+        position: fixed;
+        bottom: 0;
+        left: 1rem;
+        right: 1.2rem;
+    }
+
+    .page-header {
+        height: 130px;
+    }
+
+    .page {
+        page-break-after: always;
+    }
+
+    .page-header h4 {
+        font-size: 10pt;
+    }
+
+    img[align='left'] {
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    img[align='right'] {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    @page {
+        size: A4;
+        margin: 0mm 0mm 0mm 0mm;
+        margin-top: 10mm;
+        margin-bottom: 10mm;
+        margin-left: 2mm;
+        margin-right: 5mm;
+    }
+
+
+    @media print {
+
+
+        thead {
+            display: table-header-group;
+        }
+
+        tfoot {
+            display: table-footer-group;
+        }
+
+        button {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 2rem;
+            margin-top: 20mm;
+        }
+
+        .content-block, p {
+            page-break-inside: avoid;
+        }
+
+        html {
+            font-family: Times New Roman;
+            font-size: 14pt;
+            width: 210mm;
+            height: 297mm;
+        }
+
+        body {
+            width: 210mm;
+            height: 297mm;
+            margin-bottom: 0mm;
+        }
+
+        div.wrapper {
+            padding: 20px;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            float: left;
+        }
+
+        div.left_block {
+            text-align: center;
+            width: 50%;
+        }
+
+        div.right_block {
+            float: right;
+            width: 50%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0px solid black;
+        }
+
+        tbody td,
+        tbody th {
+            border: 0px solid black;
+            padding: 0px;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            page-break-after: auto;
+            page-break-before: auto;
+            page-break-inside: avoid;
+        }
+
+
+        .imgWrap {
+            margin-right: 10;
+            float: right;
+            vertical-align: middle;
+            width: 90px;
+            height: 90px;
+        }
+
+        .imgOvl {
+            overflow: hidden;
+            justify-content: right;
+            align-items: right;
+        }
+
+        .imgOvl img {
+            height: 90%;
+            width: auto;
+        }
+
+        .txtwrap {
+            display: inline-block;
+            text-align: right;
+            word-break: unset;
+        }
+
+        .txtwrapc {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .txtWrapb {
+            float: right;
+            vertical-align: bottom;
+            text-align: right;
+        }
+
+        .txtCard {
+            float: right;
+            vertical-align: bottom;
+            text-align: right;
+        }
+
+        .page {
+            text-align: left;
+        }
+
+
+        .page-header {
+            height: 135px;
+        }
+
+        table>tfoot {
+            border: none !important;
+            width: 100%;
+        }
+
+        .footer_fixed {
+            border: none;
+        }
+
+        .page-footer-space {
+            height: 150px;
+        }
+
+
+
+
+    }
+
+
+
+    .page-header>table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 0px solid black;
+    }
+
+    tbody>td,
+    tbody>th {
+        border: 0px solid black;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="page-header" style="text-align: center">
+            <table border="0" width="100%">
+                <tr>
+                    <td style="
+                    allign: right;
+                    width: 20%;
+                    text-align: right;
+                    border: 0;
+                    font-size: 14pt;
+                  "></td>
+                    <td style="text-align: left; vertical-align: top; border: 0; font-size: 12pt; padding: 5px;">
+                        <div class="txtwrap">
+                        --ТелефонВацап--
+                        </div>
+                    </td>
+                    <td style="text-align: left; vertical-align: top; border: 0; font-size: 12pt; padding: 5px;">
+                        <div class="txtwrapc">
+                            <p>--ФилиалАдрес--</p>
+                        </div>
+                    </td>
+                    <td style="text-align: right; vertical-align: top; border: 0; ont-size: 12pt;">
+	                    <div class="imgWrap imgOvl">
+	                    	<p>
+	                    		<img style="width: 90px; height: 90px; border-style: none; " src="data:image/jpg;base64,--QRПациента--"/> 
+	                    	</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" width="100%">
+                <tr>
+                    <td style="text-align: right; border: 0; font-size: 12px; text-align: right; padding: 5px;">
+                        <p>--КартаПациента--</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page-footer">
+            <table>
+                <tr>
+                    <td style="
+					width: 20%;
+					text-align: center;
+					vertical-align: bottom;
+					border: 0; line-height: 14pt; font-size: 14pt;
+				  ">
+                                <center><p><img style="width: 90px; height: 90px; border-style: none; " src="data:image/png; base64,--QRДоктора--"></p></center>
+                        <p><font size="2">Оставьте отзыв <br />о приеме врача</font></p>
+                    </td>
+                    <td style="
+					width: 80%;
+					font-size: 14pt;
+					text-align: left;
+					vertical-align: bottom;
+				  ">
+                        <p><!-- Конец --></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width: 20%;">
+
+                    </td>
+                    <td>
+                        <!--*** CONTENT GOES HERE ***-->
+                        <div class="page">
+                           <!-- Начало -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot class="footer_fixed">
+                <tr>
+                    <td>
+                        <div class="page-footer-space"></div>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
